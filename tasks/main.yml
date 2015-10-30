@@ -1,4 +1,4 @@
-- name: Install TexLive
+- name: TexLive| Install
   action: apt pkg={{ item }} state=latest
   with_items:
     - texlive

@@ -1,9 +1,9 @@
-- name: Download latexmk
+- name: TexLive | Download latexmk
   get_url: "url={{ latexmk_src }} dest=/usr/local/bin/latexmk" 
 
-- name: Setup ownership latexmk
+- name: TexLive | Setup ownership latexmk
   command: chown {{ latexmk_usr }} /usr/local/bin/latexmk
   when: latexmk is defined
 
-- name: Update permissions  
+- name: TexLive | Update permissions  
   command: chmod a+x /usr/local/bin/latexmk
